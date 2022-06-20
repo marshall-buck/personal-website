@@ -9,6 +9,7 @@ const nav = document.querySelector('nav');
 const workMask = document.querySelector('#work > .mask');
 const playMask = document.querySelector('#play > .mask');
 const carousel = document.querySelector('#carousel');
+const workMain = document.querySelector('#work-main');
 
 const active = { currentPage: 'contact-link' };
 closeForm.addEventListener('click', () => { formContainer.classList.toggle("invisible"); });
@@ -25,6 +26,8 @@ nav.addEventListener('click', (e) => {
     formContainer.setAttribute('class', 'container invisible');
     carousel.setAttribute('class', 'container zero-page');
     playMask.setAttribute('class', 'mask');
+    workMask.setAttribute('class', 'mask');
+    workMain.setAttribute('class', 'container zero-page');
   }
   if (active.currentPage === "contact-link") {
     formContainer.classList.toggle("invisible");
@@ -35,6 +38,8 @@ nav.addEventListener('click', (e) => {
     playSection.setAttribute('class', "container zero-page");
     workSection.setAttribute('class', 'container full-page');
     carousel.setAttribute('class', 'container zero-page');
+    workMask.setAttribute('class', 'play-invisible');
+    workMain.setAttribute('class', 'container');
 
 
 
@@ -46,7 +51,7 @@ nav.addEventListener('click', (e) => {
     workSection.setAttribute('class', "container zero-page");
     playSection.setAttribute('class', 'container full-page');
     playMask.setAttribute('class', 'play-invisible');
-    carousel.setAttribute('class', 'container full-page');
+    carousel.setAttribute('class', 'container');
 
 
   }

@@ -3,7 +3,7 @@
 :root {
   --dark-purple: #210e45;
   --dark-yellow: #d39006;
-  --nav-font-size: 2.2vmax;
+  --nav-font-size: 2vmax;
 }
 * {
   font-family: "Fredoka", sans-serif;
@@ -42,7 +42,7 @@ nav {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  gap: 0.1rem;
+  gap: 0.4rem;
   font-size: var(--nav-font-size);
   font-weight: 400;
   color: var(--dark-purple);
@@ -127,12 +127,23 @@ nav > a:hover {
   overflow-y: scroll;
   gap: 0.25rem;
   transition: all 1s ease;
+  padding: 2rem;
 }
 #carousel div {
   width: 33%;
 }
 #carousel div img {
   width: 100%;
+}
+
+/* WORK MAIN */
+#work-main {
+  transition: all 1s ease;
+}
+
+#work-main > p {
+  width: 90%;
+  font-size: 26;
 }
 
 /* CONTACT FORM */
