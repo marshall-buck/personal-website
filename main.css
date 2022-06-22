@@ -3,7 +3,7 @@
 :root {
   --dark-purple: #210e45;
   --dark-yellow: #d39006;
-  --nav-font-size: 3vmax;
+  --nav-font-size: 2vmax;
 }
 * {
   font-family: "Fredoka", sans-serif;
@@ -20,12 +20,12 @@
   align-items: center;
 }
 
-body {
+/* body {
   overflow: hidden;
-}
+} */
 
 /* NAVIGATION */
-
+/* TODO: Animation for span next to brand to shrink */
 nav {
   position: absolute;
   top: 2%;
@@ -44,7 +44,7 @@ nav {
   /* background-color: transparent; */
   z-index: 2;
 }
-nav > a {
+nav a {
   text-decoration: none;
   color: var(--dark-purple);
   transition: all 0.4s ease-in-out;
@@ -53,14 +53,34 @@ nav > a:hover {
   transform: scale(1.1);
 }
 
-.active-link-purple {
-  border-bottom: 3px solid var(--dark-purple);
+.nav-link-hide {
+  position: absolute;
+  top: -100px;
+  height: 0;
+  width: 0;
 }
-.active-link-yellow {
-  border-bottom: 3px solid var(--dark-yellow);
+
+.link-container {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.6s ease-in-out;
 }
-.material-symbols-outlined {
-  font-variation-settings: "FILL" 1, "wght" 700, "GRAD" 700, "opsz" 64;
+.link-container div {
+  pointer-events: none;
+  transition: all 0.9s ease-out;
+  font-size: 125%;
+}
+
+.link-container > div.small-link {
+  position: absolute;
+  top: 80%;
+  font-size: 50%;
+}
+span.nav-link-hide {
+  transition: all 0.9s ease-out;
 }
 
 /* CONTACT FORM */
@@ -95,7 +115,7 @@ main {
 }
 
 /* LANDING PAGE/Sections */
-#work {
+#code {
   background-color: var(--dark-yellow);
   transition: all 1s ease;
 }
@@ -104,7 +124,7 @@ main {
   transition: all 1s ease;
 }
 /* TODO: fine tune image positioning */
-#work > .mask {
+#code > .mask {
   background-image: url(/assets/pexels-negative-space-97077.jpg);
   transition: all 1s ease;
 }
@@ -160,14 +180,14 @@ main {
   width: 100%;
 }
 
-/* WORK MAIN */
-#work-main {
+/* code MAIN */
+#code-main {
   transition: all 1s ease;
   color: var(--dark-purple);
   font-size: 1.2rem;
 }
 
-#work-main > p {
+#code-main > p {
   width: 90%;
 }
 /* PLAY MAIN */
