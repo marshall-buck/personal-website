@@ -14,22 +14,20 @@
     <title>dev@marshallbuck.com</title>
   </head>
 
-  <body>
-    <header>
-      <nav>
-        <a class="" href="#"
-          ><span id="home-link" class="material-symbols-outlined">
-            home
-          </span></a
-        >
-        <span>|</span>
-        <a id="contact-link" href="#">dev@marshallbuck.com</a>
-        <span>|</span>
-        <a id="work-link" href="#">work</a>
-        <span>|</span>
-        <a id="play-link" href="#">play</a>
-      </nav>
-    </header>
+  <body class="preload">
+    <nav>
+      <a class="home-link" href="#"
+        ><span class="material-symbols-outlined"> home </span></a
+      >
+
+      <span>|</span>
+      <a class="contact-link" href="#">dev@marshallbuck.com</a>
+      <!-- <span>|</span> -->
+      <!-- <a class="work-link" href="#">work</a> -->
+      <!-- <span>|</span> -->
+      <!-- <a class="play-link" href="#">play</a> -->
+    </nav>
+
     <main>
       <section id="contact" class="container invisible">
         <div>X</div>
@@ -37,7 +35,7 @@
       </section>
 
       <section id="work" class="container half-page">
-        <div class="mask">WORK</div>
+        <a class="mask work-link">CODE</a>
         <div id="work-main" class="zero-page">
           <p>
             As a software engineer with a background in photography, I received
@@ -61,16 +59,18 @@
         </div>
       </section>
       <section id="play" class="container half-page">
-        <div class="mask">PLAY</div>
-        <div id="carousel" class="zero-page">
-          <div><img src="/assets/image-10.jpg" /></div>
-          <div><img src="/assets/image-11.jpg" /></div>
-          <div><img src="/assets/image-12.jpg" /></div>
-          <div><img src="/assets/image-13.jpg" /></div>
-          <div><img src="/assets/image-14.jpg" /></div>
-          <div><img src="/assets/image-15.jpg" /></div>
-          <div><img src="/assets/image-16.jpg" /></div>
-          <div><img src="/assets/image-17.jpg" /></div>
+        <div class="mask play-link">PLAY</div>
+        <div id="play-main" class="zero-page">
+          <div id="carousel">
+            <div><img src="/assets/image-10.jpg" /></div>
+            <div><img src="/assets/image-11.jpg" /></div>
+            <div><img src="/assets/image-12.jpg" /></div>
+            <div><img src="/assets/image-13.jpg" /></div>
+            <div><img src="/assets/image-14.jpg" /></div>
+            <div><img src="/assets/image-15.jpg" /></div>
+            <div><img src="/assets/image-16.jpg" /></div>
+            <div><img src="/assets/image-17.jpg" /></div>
+          </div>
         </div>
       </section>
     </main>

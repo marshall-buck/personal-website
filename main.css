@@ -3,10 +3,14 @@
 :root {
   --dark-purple: #210e45;
   --dark-yellow: #d39006;
-  --nav-font-size: 2vmax;
+  --nav-font-size: 3vmax;
 }
 * {
   font-family: "Fredoka", sans-serif;
+  /* border: red solid 2px; */
+}
+.preload * {
+  transition: none !important;
 }
 /* UTILITY */
 .container {
@@ -15,26 +19,16 @@
   justify-content: center;
   align-items: center;
 }
-.relative-container {
-  position: relative;
-}
 
 body {
   overflow: hidden;
 }
 
 /* NAVIGATION */
-header {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 nav {
   position: absolute;
-  top: 0;
+  top: 2%;
   right: 0;
   left: 0;
   max-width: 1380px;
@@ -47,7 +41,8 @@ nav {
   font-weight: 400;
   color: var(--dark-purple);
   margin: 0 auto;
-  background-color: transparent;
+  /* background-color: transparent; */
+  z-index: 2;
 }
 nav > a {
   text-decoration: none;
@@ -67,7 +62,37 @@ nav > a:hover {
 .material-symbols-outlined {
   font-variation-settings: "FILL" 1, "wght" 700, "GRAD" 700, "opsz" 64;
 }
+
+/* CONTACT FORM */
+#contact {
+  position: absolute;
+  top: 10vh;
+  left: 10vw;
+  right: 10vw;
+  height: 300px;
+  background-color: black;
+  transition: all 1s ease-in-out;
+  /* overflow: hidden; */
+}
+#contact > div {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.invisible {
+  transform: translateX(110vw);
+  overflow-x: hidden;
+}
 /* MAIN CONTAINER */
+/* needed to prevent scrolling */
+main {
+  overflow: hidden;
+  position: relative;
+}
 
 /* LANDING PAGE/Sections */
 #work {
@@ -102,11 +127,10 @@ nav > a:hover {
   color: transparent;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
   text-align: center;
   user-select: none;
   transition: all 1s ease;
-  height: auto;
+  cursor: pointer;
 }
 .full-page {
   height: 100vh;
@@ -143,34 +167,15 @@ nav > a:hover {
 
 #work-main > p {
   width: 90%;
-  font-size: 26;
 }
-
-/* CONTACT FORM */
-#contact {
-  position: absolute;
-  top: 10vh;
-  left: 10vw;
-  right: 10vw;
-  height: 300px;
-  background-color: black;
-  transition: all 1s ease-in-out;
-}
-#contact > div {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  color: white;
-  cursor: pointer;
-}
-
-.invisible {
-  transform: translateX(100vw);
+/* PLAY MAIN */
+#play-main {
+  transition: all 1s ease;
 }
 
 /* MEDIA QUERIES */
 
-@media (min-width: 576px) {
+/* @media (min-width: 576px) {
   nav {
     gap: 1rem;
   }
@@ -179,14 +184,14 @@ nav > a:hover {
   nav {
     gap: 1rem;
   }
-}
+} */
 
 @media (min-width: 1080px) {
   .mask {
     font-size: 35vmin;
   }
-  nav {
+  /* nav {
     gap: 3rem;
     --nav-font-size: 2vmax;
-  }
+  } */
 }
