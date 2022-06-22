@@ -31,14 +31,14 @@ closeForm.addEventListener('click', () => {
 
   formContainer.classList.toggle("invisible");
   active.isContactFormVisible = false;
-  console.log(active);
+
 });
 
 nav.addEventListener('click', (e) => {
   const list = e.target.classList;
 
   if (list.contains('home-link')) {
-    console.log(e);
+
     homeLinkClick();
   }
   if (list.contains('contact-link')) {
@@ -52,7 +52,7 @@ nav.addEventListener('click', (e) => {
     playLinkClick();
   }
 
-  console.log(e, active);
+
 
 });
 workMask.addEventListener('click', () => {
