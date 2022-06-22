@@ -38,6 +38,7 @@ nav.addEventListener('click', (e) => {
   const list = e.target.classList;
 
   if (list.contains('home-link')) {
+    console.log(e);
     homeLinkClick();
   }
   if (list.contains('contact-link')) {
@@ -54,12 +55,12 @@ nav.addEventListener('click', (e) => {
   console.log(e, active);
 
 });
-workMask.addEventListener('click', (e) => {
-  workLinkClick(e);
+workMask.addEventListener('click', () => {
+  workLinkClick();
 });
 
-playMask.addEventListener('click', (e) => {
-  console.log(e);
+playMask.addEventListener('click', () => {
+  playLinkClick();
 });
 
 /*TODO: Create func to loop through nav links and set active class*/
@@ -92,6 +93,7 @@ function playLinkClick() {
 }
 
 function homeLinkClick() {
+
   active.currentPage = 'home-link';
   setNavText('var(--dark-purple)');
   workSection.setAttribute('class', "container half-page");

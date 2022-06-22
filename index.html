@@ -16,9 +16,11 @@
 
   <body class="preload">
     <nav>
-      <a class="home-link" href="#"
+      <!-- FIXME: material icon takes on=ver classlist -->
+      <!-- <a class="home-link" href="#"
         ><span class="material-symbols-outlined"> home </span></a
-      >
+      > -->
+      <a href="#" class="home-link">home</a>
 
       <span>|</span>
       <a class="contact-link" href="#">dev@marshallbuck.com</a>
@@ -55,7 +57,9 @@
             playing bass. I've also watched the entirety of Doctor Who and
             Battlestar Galactica more times than I like to admit.
           </p>
-          <button>Download Resume</button>
+          <form action="/assets/res.pdf" target="_blank">
+            <button>Download Resume</button>
+          </form>
         </div>
       </section>
       <section id="play" class="container half-page">

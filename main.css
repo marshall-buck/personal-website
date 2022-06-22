@@ -163,6 +163,8 @@ main {
 /* WORK MAIN */
 #work-main {
   transition: all 1s ease;
+  color: var(--dark-purple);
+  font-size: 1.2rem;
 }
 
 #work-main > p {
@@ -175,7 +177,7 @@ main {
 
 /* MEDIA QUERIES */
 
-/* @media (min-width: 576px) {
+@media (min-width: 576px) {
   nav {
     gap: 1rem;
   }
@@ -184,7 +186,7 @@ main {
   nav {
     gap: 1rem;
   }
-} */
+}
 
 @media (min-width: 1080px) {
   .mask {
