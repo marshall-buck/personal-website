@@ -25,7 +25,13 @@
   -moz-user-select: none;
   -webkit-user-select: none;
 }
-
+/* reset ul padding */
+ul {
+  padding-inline-start: 0;
+  list-style: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
 /* body {
   overflow: hidden;
 } */
@@ -175,16 +181,21 @@ main {
 }
 /* PLAY MAIN */
 #play-main {
+  width: 100vw;
   overflow-y: scroll;
-  /* padding-top: 10rem; */
 }
 
 /* Carousel */
 
 #carousel {
+  height: 80vh;
+  margin: 0 auto;
 }
 
 #carousel li img {
+  width: 90vw;
+  padding: 4rem 0 4rem 0;
+  margin: 0 auto;
 }
 
 /* MEDIA QUERIES */
@@ -204,8 +215,22 @@ main {
   .mask {
     font-size: 35vmin;
   }
-  /* nav {
-    gap: 3rem;
-    --nav-font-size: 2vmax;
-  } */
+}
+
+@media (orientation: landscape) {
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  #play-main {
+    /* width: 100vw; */
+    overflow-y: hidden;
+    overflow-x: scroll;
+  }
+  #carousel li img {
+    height: 65vh;
+    width: auto;
+  }
 }

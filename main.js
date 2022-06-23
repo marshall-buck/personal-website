@@ -90,9 +90,7 @@ function showCodePlayNavLink() {
 
 function hideCodePlayNavLink() {
   codePlayNavLink.classList.add('nav-link-hide');
-
   codePlayNavLink.lastElementChild.classList.remove('small-link');
-
   codePlayNavLink.firstElementChild.classList.remove('small-link');
 
 }
