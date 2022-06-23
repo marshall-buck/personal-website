@@ -80,9 +80,10 @@ function setNavColor(color) {
   for (let e of navText) {
     e.style.color = color;
   }
-  // if (active.currentPage !== 'play-link') {
-  //   nav.style.backgroundColor = 'var(--dark-yellow)';
-  // } else nav.style.backgroundColor = 'var(--dark-purple)';
+  // Needed for nav to cover code section
+  if (active.currentPage !== 'play-link') {
+    nav.style.backgroundColor = 'var(--dark-yellow)';
+  } else nav.style.backgroundColor = 'var(--dark-purple)';
 }
 
 function showCodePlayNavLink() {
@@ -107,7 +108,7 @@ function codeMaskClicked() {
   active.codePlayLinkVisible = true;
   setNavColor('var(--dark-purple)');
   playSection.setAttribute('class', "container zero-page");
-  codeSection.setAttribute('class', 'flow-root  full-page');
+  codeSection.setAttribute('class', 'full-page code-scroll');
   codeMain.style.display = 'flex';
   codeMask.setAttribute('class', 'mask-invisible');
   codeMain.setAttribute('class', 'container');

@@ -3,13 +3,13 @@
 :root {
   --dark-purple: #210e45;
   --dark-yellow: #d39006;
-  --nav-font-size: 2vmax;
+  --nav-font-size: 2.2vmax;
   --code-border-radius: 4px;
   --box-shadow-purple: rgba(33, 14, 69, 0.4);
 }
 * {
   font-family: "Fredoka", sans-serif;
-  /* border: 2px solid red; */
+  /* border: 1px solid red; */
 }
 body {
   overflow: hidden;
@@ -65,9 +65,10 @@ ul {
 
 nav {
   position: absolute;
-  top: 2%;
+  top: 0;
   right: 0;
   left: 0;
+  height: 3rem;
   max-width: 1380px;
   display: flex;
   justify-content: center;
@@ -222,22 +223,16 @@ main {
 }
 
 /* CODE SECTION */
-
+.code-scroll {
+  overflow-y: scroll;
+  padding-top: 2rem;
+}
 /* FIXME: scrolling over navbar*/
 
 #code-main {
   transition: all 1s ease;
   color: var(--dark-purple);
   font-size: 1.2rem;
-}
-
-.flow-root {
-  display: flow-root;
-  position: relative;
-  overflow-y: scroll;
-  height: 100vh;
-  padding-bottom: 2rem;
-  padding-top: 2rem;
 }
 
 /* TODO: scroll container for code main */
