@@ -17,7 +17,7 @@ const playSection = document.querySelector('#play');
 const playMask = document.querySelector('#play > .mask');
 const playMain = document.querySelector('#play-main');
 
-// const carousel = document.querySelector('#carousel');
+
 
 
 

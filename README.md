@@ -1,6 +1,6 @@
 # Personal web site assignment
 
-- [ ] Put in images
+- [x] Put in images
 - [ ] Format code page
-- [ ] Format play page
+- [x] Format play page
 - [ ] Put in contact form
