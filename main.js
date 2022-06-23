@@ -53,7 +53,7 @@ nav.addEventListener('click', (e) => {
 codeMask.addEventListener('click', () => {
   codeMaskClicked();
 });
-// FIXME: codePlayNavLink doenst work when clicked play from home screen
+// FIXME: codePlayNavLink doesn't work when clicked play from home screen
 playMask.addEventListener('click', () => {
 
   playMaskClicked();
