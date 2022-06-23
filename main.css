@@ -9,6 +9,10 @@
 }
 * {
   font-family: "Fredoka", sans-serif;
+  /* border: 2px solid red; */
+}
+body {
+  overflow: hidden;
 }
 .preload * {
   transition: none !important;
