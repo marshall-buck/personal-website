@@ -18,8 +18,10 @@ const playMask = document.querySelector('#play > .mask');
 const playMain = document.querySelector('#play-main');
 
 
+const contact = document.querySelector('#contact-link');
 
 
+// FIXME: need to remove masks from viewport when not on home page
 
 // UI STATE
 const active = { currentPage: 'landing', isContactFormVisible: false, codePlayLinkVisible: false };
@@ -31,23 +33,24 @@ window.addEventListener('load', () => {
 });
 
 closeForm.addEventListener('click', () => {
-
   formContainer.classList.toggle("invisible");
   active.isContactFormVisible = false;
+});
+
+contact.addEventListener('submit', (e) => {
+  console.log(e);
+  // formContainer.classList.toggle("invisible");
+  // active.isContactFormVisible = true;
 
 });
 
 nav.addEventListener('click', (e) => {
   const list = e.target.classList;
-
   if (list.contains('home-link')) {
 
     homeLinkClick();
   }
-  if (list.contains('contact-link')) {
-    formContainer.classList.toggle("invisible");
-    active.isContactFormVisible = true;
-  }
+
 
 });
 codeMask.addEventListener('click', () => {
@@ -104,6 +107,7 @@ function codeMaskClicked() {
   codeMask.setAttribute('class', 'mask-invisible');
   codeMain.setAttribute('class', 'container');
   playMain.setAttribute('class', 'zero-page ');
+  playMask.setAttribute('class', 'mask-invisible');
   showCodePlayNavLink();
 
 
@@ -114,6 +118,7 @@ function playMaskClicked() {
   active.currentPage = 'play-link';
   setNavText('var(--dark-yellow)');
   codeSection.setAttribute('class', "container zero-page");
+  codeMask.setAttribute('class', 'mask-invisible');
   playSection.setAttribute('class', 'container full-page');
   playMask.setAttribute('class', 'mask-invisible');
   playMain.setAttribute('class', 'container');

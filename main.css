@@ -179,7 +179,6 @@ main {
 .zero-page {
   height: 0px;
   opacity: 0;
-  margin: 0;
 }
 
 /* CODE SECTION */
@@ -199,7 +198,7 @@ main {
   box-shadow: 0 3px 10px var(--box-shadow-purple);
 }
 
-button[name="open-res"] {
+#code-main button {
   background-color: var(--dark-purple);
   color: var(--dark-yellow);
   font-size: 110%;
