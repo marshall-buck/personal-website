@@ -53,8 +53,7 @@ nav.addEventListener('click', (e) => {
 codeMask.addEventListener('click', () => {
   codeMaskClicked();
 });
-// FIXME: When coming from the home screen, pressing play then pressing
-// the codePlayNavLink, it goes to the the code page but the animation doesnt work
+
 playMask.addEventListener('click', () => {
 
   playMaskClicked();
