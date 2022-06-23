@@ -76,10 +76,13 @@ codePlayNavLink.addEventListener('click', (e) => {
 });
 
 
-function setNavText(color) {
+function setNavColor(color) {
   for (let e of navText) {
     e.style.color = color;
   }
+  // if (active.currentPage !== 'play-link') {
+  //   nav.style.backgroundColor = 'var(--dark-yellow)';
+  // } else nav.style.backgroundColor = 'var(--dark-purple)';
 }
 
 function showCodePlayNavLink() {
@@ -102,9 +105,10 @@ function hideCodePlayNavLink() {
 function codeMaskClicked() {
   active.currentPage = 'code-link';
   active.codePlayLinkVisible = true;
-  setNavText('var(--dark-purple)');
+  setNavColor('var(--dark-purple)');
   playSection.setAttribute('class', "container zero-page");
-  codeSection.setAttribute('class', 'container full-page');
+  codeSection.setAttribute('class', 'flow-root  full-page');
+  codeMain.style.display = 'flex';
   codeMask.setAttribute('class', 'mask-invisible');
   codeMain.setAttribute('class', 'container');
   playMain.setAttribute('class', 'zero-page ');
@@ -117,9 +121,10 @@ function codeMaskClicked() {
 function playMaskClicked() {
   active.codePlayLinkVisible = true;
   active.currentPage = 'play-link';
-  setNavText('var(--dark-yellow)');
+  setNavColor('var(--dark-yellow)');
   codeSection.setAttribute('class', "container zero-page");
   codeMask.setAttribute('class', 'mask-invisible');
+  codeMain.style.display = 'none';
   playSection.setAttribute('class', 'container full-page');
   playMask.setAttribute('class', 'mask-invisible');
   playMain.setAttribute('class', 'container');
@@ -130,7 +135,7 @@ function playMaskClicked() {
 function homeLinkClick() {
   active.codePlayLinkVisible = false;
   active.currentPage = 'home-link';
-  setNavText('var(--dark-purple)');
+  setNavColor('var(--dark-purple)');
   codeSection.setAttribute('class', "container half-page");
   playSection.setAttribute('class', 'container half-page');
   formContainer.setAttribute('class', 'container invisible');

@@ -29,10 +29,11 @@ button {
   padding: 1rem 0 1rem 0;
   border-radius: var(--code-border-radius);
   border-color: transparent;
-  transition: all 0.4s ease;
+  transition: all 0.4s ease-in-out;
   width: 200px;
 }
-button:hover {
+button,
+.btn-contact:hover {
   transform: scale(1.1);
 }
 
@@ -73,7 +74,7 @@ nav {
   font-weight: 400;
   color: var(--dark-purple);
   margin: 0 auto;
-  z-index: 2;
+  z-index: 20;
 }
 nav a {
   text-decoration: none;
@@ -218,23 +219,23 @@ main {
 
 /* CODE SECTION */
 
-/* FIXME: scrolling issues*/
-.code-main-container {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  height: 80vh;
-  margin-bottom: 3rem;
+/* FIXME: scrolling over navbar*/
 
-  overflow-x: scroll;
-}
-
-#code-main > * {
+#code-main {
   transition: all 1s ease;
   color: var(--dark-purple);
   font-size: 1.2rem;
 }
+
+.flow-root {
+  display: flow-root;
+  position: relative;
+  overflow-y: scroll;
+  height: 100vh;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
 /* TODO: scroll container for code main */
 #code-main > p {
   width: 80%;
