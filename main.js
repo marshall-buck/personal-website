@@ -71,7 +71,7 @@ codePlayNavLink.addEventListener('click', (e) => {
 
 });
 
-/*TODO: Create func to loop through nav links and set active class*/
+
 function setNavText(color) {
   for (let e of navText) {
     e.style.color = color;

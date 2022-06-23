@@ -29,7 +29,7 @@
 /* body {
   overflow: hidden;
 } */
-
+/* FIXME: Fix navigation hovers */
 /* NAVIGATION */
 
 nav {
@@ -133,7 +133,7 @@ main {
   background-image: url(/assets/image-12.jpg);
   transition: all 1s ease;
 }
-/* set when play mask on main page is clicked */
+
 .mask-invisible {
   opacity: 0;
   transform: translateY(150vh);
@@ -176,6 +176,7 @@ main {
 /* PLAY MAIN */
 #play-main {
   overflow-y: scroll;
+  /* padding-top: 10rem; */
 }
 
 /* Carousel */
