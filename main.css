@@ -134,9 +134,9 @@ main {
   transition: all 1s ease;
 }
 /* set when play mask on main page is clicked */
-.play-invisible {
+.mask-invisible {
   opacity: 0;
-  /* transform: translateY(150vh); */
+  transform: translateY(150vh);
 }
 .mask {
   font-weight: 500;
@@ -181,12 +181,9 @@ main {
 /* Carousel */
 
 #carousel {
-  margin: 0 auto;
 }
 
 #carousel li img {
-  width: 90%;
-  padding: 1rem 0 1rem 0;
 }
 
 /* MEDIA QUERIES */

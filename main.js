@@ -91,9 +91,9 @@ function showCodePlayNavLink() {
 function hideCodePlayNavLink() {
   codePlayNavLink.classList.add('nav-link-hide');
 
-  codePlayNavLink.lastElementChild.classList.add('small-link');
+  codePlayNavLink.lastElementChild.classList.remove('small-link');
 
-  codePlayNavLink.firstElementChild.classList.add('small-link');
+  codePlayNavLink.firstElementChild.classList.remove('small-link');
 
 }
 
@@ -103,7 +103,7 @@ function codeMaskClicked() {
   setNavText('var(--dark-purple)');
   playSection.setAttribute('class', "container zero-page");
   codeSection.setAttribute('class', 'container full-page');
-  codeMask.setAttribute('class', 'play-invisible');
+  codeMask.setAttribute('class', 'mask-invisible');
   codeMain.setAttribute('class', 'container');
   playMain.setAttribute('class', 'zero-page ');
   showCodePlayNavLink();
@@ -117,7 +117,7 @@ function playMaskClicked() {
   setNavText('var(--dark-yellow)');
   codeSection.setAttribute('class', "container zero-page");
   playSection.setAttribute('class', 'container full-page');
-  playMask.setAttribute('class', 'play-invisible');
+  playMask.setAttribute('class', 'mask-invisible');
   playMain.setAttribute('class', 'container');
   showCodePlayNavLink();
 
