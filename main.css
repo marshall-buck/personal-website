@@ -4,6 +4,8 @@
   --dark-purple: #210e45;
   --dark-yellow: #d39006;
   --nav-font-size: 2vmax;
+  --code-border-radius: 4px;
+  --box-shadow-purple: rgba(33, 14, 69, 0.4);
 }
 * {
   font-family: "Fredoka", sans-serif;
@@ -17,6 +19,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.mt-mains {
+  padding-top: 6rem;
 }
 /* Prevent the type cursor from showing up on home page */
 .prevent-type-select {
@@ -94,14 +99,27 @@ nav > a:hover {
   top: 10vh;
   left: 10vw;
   right: 10vw;
-  height: 300px;
+  bottom: 30vh;
+  border-radius: 1rem;
   background-color: black;
   transition: all 1s ease-in-out;
 }
+#contact > form {
+  width: 80%;
+  height: 80%;
+  color: var(--dark-yellow);
+}
+.form-group {
+  display: flex;
+  flex-flow: row nowrap;
+}
+input[type="email"] {
+  width: 95%;
+}
 #contact > div {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 15px;
+  right: 15px;
   color: white;
   cursor: pointer;
   overflow: hidden;
@@ -152,7 +170,7 @@ main {
   text-align: center;
   transition: all 1s ease;
   cursor: pointer;
-  z-index: 5;
+  /* z-index: 5; */
 }
 .full-page {
   height: 100vh;
@@ -163,20 +181,40 @@ main {
 .zero-page {
   height: 0px;
   opacity: 0;
+  margin: 0;
 }
 
-/* code MAIN */
-#code-main {
+/* CODE SECTION */
+
+/* FIXME: scrolling issues*/
+#code-main > * {
   transition: all 1s ease;
   color: var(--dark-purple);
   font-size: 1.2rem;
 }
-
+/* TODO: scroll container for code main */
 #code-main > p {
-  width: 90%;
-  transition: all 1s ease;
+  width: 80%;
+  border: 1px solid var(--dark-purple);
+  padding: 1rem;
+  border-radius: var(--code-border-radius);
+  box-shadow: 0 3px 10px var(--box-shadow-purple);
 }
-/* PLAY MAIN */
+
+button[name="open-res"] {
+  background-color: var(--dark-purple);
+  color: var(--dark-yellow);
+  font-size: 110%;
+  padding: 1rem 3rem 1rem 3rem;
+  border-radius: var(--code-border-radius);
+  border-color: transparent;
+  transition: all 0.4s ease;
+}
+button[name="open-res"]:hover {
+  transform: scale(1.1);
+}
+
+/* PLAY SECTION */
 #play-main {
   width: 100vw;
   overflow-y: scroll;
@@ -204,12 +242,7 @@ main {
 
 @media (min-width: 576px) {
   nav {
-    gap: 1rem;
-  }
-}
-@media (min-width: 576px) {
-  nav {
-    gap: 1rem;
+    gap: 2rem;
   }
 }
 
@@ -221,11 +254,17 @@ main {
     height: auto;
     width: 75vw;
   }
+  #code-main > p {
+    font-size: 1.4rem;
+  }
 }
 @media (min-width: 1200px) {
   #carousel li img {
     height: auto;
     width: 70vw;
+  }
+  #code-main > p {
+    font-size: 2rem;
   }
 }
 
