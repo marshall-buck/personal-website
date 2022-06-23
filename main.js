@@ -39,8 +39,9 @@ closeForm.addEventListener('click', () => {
 
 contact.addEventListener('submit', (e) => {
   console.log(e);
-  // formContainer.classList.toggle("invisible");
-  // active.isContactFormVisible = true;
+  e.preventDefault();
+  formContainer.classList.toggle("invisible");
+  active.isContactFormVisible = true;
 
 });
 

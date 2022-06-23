@@ -198,16 +198,23 @@ main {
   box-shadow: 0 3px 10px var(--box-shadow-purple);
 }
 
+.contact-buttons-container {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+}
+
 #code-main button {
   background-color: var(--dark-purple);
   color: var(--dark-yellow);
   font-size: 110%;
-  padding: 1rem 3rem 1rem 3rem;
+  padding: 1rem 0 1rem 0;
   border-radius: var(--code-border-radius);
   border-color: transparent;
   transition: all 0.4s ease;
+  width: 200px;
 }
-button[name="open-res"]:hover {
+#code-main button:hover {
   transform: scale(1.1);
 }
 
