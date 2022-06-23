@@ -53,7 +53,8 @@ nav.addEventListener('click', (e) => {
 codeMask.addEventListener('click', () => {
   codeMaskClicked();
 });
-// FIXME: codePlayNavLink doesn't work when clicked play from home screen
+// FIXME: When coming from the home screen, pressing play then pressing
+// the codePlayNavLink, it goes to the the code page but the animation doesnt work
 playMask.addEventListener('click', () => {
 
   playMaskClicked();
@@ -86,7 +87,14 @@ function showCodePlayNavLink() {
   } else {
     codePlayNavLink.firstElementChild.classList.add('small-link');
   }
+}
 
+function hideCodePlayNavLink() {
+  codePlayNavLink.classList.add('nav-link-hide');
+
+  codePlayNavLink.lastElementChild.classList.add('small-link');
+
+  codePlayNavLink.firstElementChild.classList.add('small-link');
 
 }
 
@@ -127,7 +135,7 @@ function homeLinkClick() {
   codeMask.setAttribute('class', 'mask');
   codeMain.setAttribute('class', 'container zero-page');
   playMain.setAttribute('class', 'zero-page ');
+  hideCodePlayNavLink();
 
-  codePlayNavLink.classList.add('nav-link-hide');
 }
 
