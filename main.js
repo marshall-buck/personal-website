@@ -20,6 +20,7 @@ const playMain = document.querySelector('#play-main');
 
 const contact = document.querySelector('#contact-link');
 
+const main = document.querySelector('main');
 
 // FIXME: need to remove masks from viewport when not on home page
 
@@ -83,7 +84,12 @@ function setNavColor(color) {
   // Needed for nav to cover code section
   if (active.currentPage !== 'play-link') {
     nav.style.backgroundColor = 'var(--dark-yellow)';
-  } else nav.style.backgroundColor = 'var(--dark-purple)';
+    main.style.backgroundColor = 'var(--dark-yellow)';
+
+  } else {
+    nav.style.backgroundColor = 'var(--dark-purple)';
+    main.style.backgroundColor = 'var(--dark-purple)';
+  }
 }
 
 function showCodePlayNavLink() {
