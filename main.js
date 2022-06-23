@@ -1,4 +1,4 @@
-
+"use strict";
 const codeSection = document.querySelector('#code');
 const codeMain = document.querySelector('#code-main');
 const codeMask = document.querySelector('#code > .mask');
@@ -53,7 +53,7 @@ nav.addEventListener('click', (e) => {
 codeMask.addEventListener('click', () => {
   codeMaskClicked();
 });
-
+// FIXME: codePlayNavLink doenst work when clicked play from home screen
 playMask.addEventListener('click', () => {
 
   playMaskClicked();

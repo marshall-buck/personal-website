@@ -10,6 +10,7 @@
     />
     <link rel="stylesheet" href="/reset.css" />
     <link rel="stylesheet" href="/main.css" />
+    <script defer src="/main.js"></script>
 
     <title>dev@marshallbuck.com</title>
   </head>
@@ -33,7 +34,7 @@
       <section id="code" class="container half-page">
         <a class="mask">CODE</a>
         <div id="code-main" class="zero-page">
-          <p>
+          <p class="prevent-type-select">
             As a software engineer with a background in photography, I received
             a BA in Industrial Scientific Photography and morphed into the
             high-volume portrait business. Starting as a photographer, I worked
@@ -56,7 +57,7 @@
           </form>
         </div>
       </section>
-      <section id="play" class="container half-page">
+      <section id="play" class="container half-page prevent-user-select">
         <div class="mask">PLAY</div>
         <!-- FIXME: steps into document flow, when not visible, need to fix
         margin-top /padding-top is messing it up -->
@@ -74,7 +75,5 @@
         </div>
       </section>
     </main>
-
-    <script src="/main.js"></script>
   </body>
 </html>

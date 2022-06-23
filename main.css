@@ -19,6 +19,12 @@
   justify-content: center;
   align-items: center;
 }
+/* Prevent the type cursor from showing up on home page */
+.prevent-type-select {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
 
 /* body {
   overflow: hidden;
