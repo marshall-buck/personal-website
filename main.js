@@ -22,7 +22,7 @@ const contact = document.querySelector('#contact-link');
 
 const main = document.querySelector('main');
 
-// FIXME: need to remove masks from viewport when not on home page
+
 
 // UI STATE
 const active = { currentPage: 'landing', isContactFormVisible: false, codePlayLinkVisible: false };

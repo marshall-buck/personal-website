@@ -6,6 +6,7 @@
   --nav-font-size: 3vmax;
   --code-border-radius: 4px;
   --box-shadow-purple: rgba(33, 14, 69, 0.4);
+  --base-transition: all 0.4s ease-in-out;
 }
 * {
   font-family: "Fredoka", sans-serif;
@@ -14,6 +15,8 @@
 body {
   overflow: hidden;
 }
+/* Used to stop transitions on site load, changed in javascript
+after window.load */
 .preload * {
   transition: none !important;
 }
@@ -33,17 +36,18 @@ button {
   padding: 1rem 0 1rem 0;
   border-radius: var(--code-border-radius);
   border-color: transparent;
-  transition: all 0.4s ease-in-out;
+  transition: var(--base-transition);
   width: 200px;
-}
-button,
-.btn-contact:hover {
-  transform: scale(1.1);
+  cursor: pointer;
 }
 
 .btn-contact {
   background-color: var(--dark-yellow);
   color: var(--dark-purple);
+}
+button:hover,
+.btn-contact:hover {
+  transform: scale(1.1);
 }
 
 /* Prevent the type cursor from showing up on home page */
@@ -68,7 +72,7 @@ nav {
   top: 0;
   right: 0;
   left: 0;
-  height: 4rem;
+  height: 2rem;
   max-width: 1380px;
   display: flex;
   justify-content: center;
@@ -80,12 +84,11 @@ nav {
   color: var(--dark-purple);
   margin: 0 auto;
   z-index: 20;
-  padding-top: 0.5rem;
 }
 nav a {
   text-decoration: none;
   color: var(--dark-purple);
-  transition: all 0.4s ease-in-out;
+  transition: var(--base-transition);
 }
 nav > a:hover {
   transform: scale(1.1);
@@ -104,11 +107,9 @@ nav > a:hover {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  transition: all 0.6s ease-in-out;
 }
 .link-container div {
   pointer-events: none;
-  transition: all 0.9s ease-out;
   font-size: 125%;
 }
 
@@ -126,9 +127,9 @@ nav > a:hover {
   left: 10vw;
   right: 10vw;
   bottom: 30vh;
-  border-radius: 1rem;
-  background-color: black;
-  transition: all 1s ease-in-out;
+  border-radius: 4px;
+  background-color: var(--dark-purple);
+  transition: var(--base-transition);
   z-index: 10;
 }
 form[name="contact-form"] {
@@ -180,21 +181,21 @@ main {
 /* LANDING PAGE/Sections */
 #code {
   background-color: var(--dark-yellow);
-  transition: all 1s ease;
+  transition: var(--base-transition);
 }
 #play {
   background-color: var(--dark-purple);
-  transition: all 1s ease;
+  transition: var(--base-transition);
 }
 /* TODO: fine tune image positioning */
 #code > .mask {
   background-image: url(/assets/pexels-negative-space-97077.jpg);
-  transition: all 1s ease;
+  transition: var(--base-transition);
 }
 
 #play > .mask {
   background-image: url(/assets/image-12.jpg);
-  transition: all 1s ease;
+  transition: var(--base-transition);
 }
 
 .mask-invisible {
@@ -210,7 +211,7 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
-  transition: all 1s ease;
+  transition: var(--base-transition);
   cursor: pointer;
   z-index: 5;
 }
@@ -233,7 +234,7 @@ main {
 /* FIXME: scrolling over navbar*/
 
 #code-main {
-  transition: all 1s ease;
+  transition: var(--base-transition);
   color: var(--dark-purple);
   font-size: 1.2rem;
 }
@@ -273,7 +274,7 @@ main {
   width: 90vw;
   padding: 4rem 0 4rem 0;
   margin: 0 auto;
-  transition: all 0.4s ease-in;
+  transition: var(--base-transition);
 }
 #carousel li img:active {
   width: 100vw;
@@ -286,9 +287,18 @@ main {
   nav {
     gap: 3rem;
   }
+  textarea {
+    width: 100%;
+    min-height: 100px;
+    border-radius: 4px;
+  }
 }
 
 @media (min-width: 992px) {
+  nav {
+    padding-top: 0.5rem;
+    height: 4rem;
+  }
   .mask {
     font-size: 35vmin;
   }
