@@ -116,10 +116,10 @@ function codeMaskClicked() {
   playSection.setAttribute('class', "container zero-page");
   codeSection.setAttribute('class', 'full-page code-scroll');
   codeMain.style.display = 'flex';
-  codeMask.setAttribute('class', 'mask-invisible');
+  codeMask.setAttribute('class', 'code-mask-invisible');
   codeMain.setAttribute('class', 'container');
   playMain.setAttribute('class', 'zero-page ');
-  playMask.setAttribute('class', 'mask-invisible');
+  playMask.setAttribute('class', 'play-mask-invisible');
   showCodePlayNavLink();
 
 
@@ -130,10 +130,10 @@ function playMaskClicked() {
   active.currentPage = 'play-link';
   setNavColor('var(--dark-yellow)');
   codeSection.setAttribute('class', "container zero-page");
-  codeMask.setAttribute('class', 'mask-invisible');
+  codeMask.setAttribute('class', 'code-mask-invisible');
   codeMain.style.display = 'none';
   playSection.setAttribute('class', 'container full-page');
-  playMask.setAttribute('class', 'mask-invisible');
+  playMask.setAttribute('class', 'play-mask-invisible');
   playMain.setAttribute('class', 'container');
   showCodePlayNavLink();
 

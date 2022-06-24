@@ -200,7 +200,11 @@ main {
   transition: var(--mask-transition);
 }
 
-.mask-invisible {
+.code-mask-invisible {
+  opacity: 0;
+  transform: translateY(150vh);
+}
+.play-mask-invisible {
   opacity: 0;
   transform: translateY(-150vh);
 }
