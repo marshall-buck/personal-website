@@ -6,7 +6,9 @@
   --nav-font-size: 3vmax;
   --code-border-radius: 4px;
   --box-shadow-purple: rgba(33, 14, 69, 0.4);
-  --base-transition: all 0.4s ease-in-out;
+  --button-transition: all 0.4s ease-in-out;
+  --page-transition: all 0.5s ease-out;
+  --mask-transition: all 0.7s ease-in;
 }
 * {
   font-family: "Fredoka", sans-serif;
@@ -36,7 +38,7 @@ button {
   padding: 1rem 0 1rem 0;
   border-radius: var(--code-border-radius);
   border-color: transparent;
-  transition: var(--base-transition);
+  transition: var(--button-transition);
   width: 200px;
   cursor: pointer;
 }
@@ -88,7 +90,7 @@ nav {
 nav a {
   text-decoration: none;
   color: var(--dark-purple);
-  transition: var(--base-transition);
+  transition: var(--button-transition);
 }
 nav > a:hover {
   transform: scale(1.1);
@@ -129,7 +131,7 @@ nav > a:hover {
   bottom: 30vh;
   border-radius: 4px;
   background-color: var(--dark-purple);
-  transition: var(--base-transition);
+  transition: var(--page-transition);
   z-index: 10;
 }
 form[name="contact-form"] {
@@ -181,26 +183,26 @@ main {
 /* LANDING PAGE/Sections */
 #code {
   background-color: var(--dark-yellow);
-  transition: var(--base-transition);
+  transition: var(--page-transition);
 }
 #play {
   background-color: var(--dark-purple);
-  transition: var(--base-transition);
+  transition: var(--page-transition);
 }
 /* TODO: fine tune image positioning */
 #code > .mask {
   background-image: url(/assets/pexels-negative-space-97077.jpg);
-  transition: var(--base-transition);
+  transition: var(--mask-transition);
 }
 
 #play > .mask {
   background-image: url(/assets/image-12.jpg);
-  transition: var(--base-transition);
+  transition: var(--mask-transition);
 }
 
 .mask-invisible {
   opacity: 0;
-  transform: translateY(150vh);
+  transform: translateY(-150vh);
 }
 .mask {
   font-weight: 500;
@@ -211,7 +213,7 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
-  transition: var(--base-transition);
+  transition: var(--button-transition);
   cursor: pointer;
   z-index: 5;
 }
@@ -234,7 +236,7 @@ main {
 /* FIXME: scrolling over navbar*/
 
 #code-main {
-  transition: var(--base-transition);
+  transition: var(--button-transition);
   color: var(--dark-purple);
   font-size: 1.2rem;
 }
@@ -274,7 +276,7 @@ main {
   width: 90vw;
   padding: 4rem 0 4rem 0;
   margin: 0 auto;
-  transition: var(--base-transition);
+  transition: var(--button-transition);
 }
 #carousel li img:active {
   width: 100vw;

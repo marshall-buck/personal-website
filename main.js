@@ -18,7 +18,7 @@ const playMask = document.querySelector('#play > .mask');
 const playMain = document.querySelector('#play-main');
 
 
-const contact = document.querySelector('#contact-link');
+const contactButton = document.querySelector('#contact-link');
 
 const main = document.querySelector('main');
 
@@ -38,8 +38,8 @@ closeForm.addEventListener('click', () => {
   active.isContactFormVisible = false;
 });
 
-contact.addEventListener('submit', (e) => {
-  console.log(e);
+contactButton.addEventListener('submit', (e) => {
+
   e.preventDefault();
   formContainer.classList.toggle("invisible");
   active.isContactFormVisible = true;
