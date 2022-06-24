@@ -3,7 +3,7 @@
 :root {
   --dark-purple: #210e45;
   --dark-yellow: #d39006;
-  --nav-font-size: 3vmax;
+  --nav-font-size: 2.5vmax;
   --code-border-radius: 4px;
   --box-shadow-purple: rgba(33, 14, 69, 0.4);
   --button-transition: all 0.4s ease-in-out;
@@ -81,7 +81,7 @@ nav {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  gap: 0.4rem;
+  gap: 1rem;
   font-size: var(--nav-font-size);
   font-weight: 400;
   color: var(--dark-purple);
