@@ -123,6 +123,10 @@ nav > a:hover {
 }
 
 /* CONTACT FORM */
+/* This is hide contact form */
+.invisible {
+  transform: translateX(110vw);
+}
 #contact {
   position: absolute;
   top: 10vh;
@@ -133,6 +137,17 @@ nav > a:hover {
   background-color: var(--dark-purple);
   transition: var(--page-transition);
   z-index: 10;
+  opacity: 0.95;
+}
+
+/* for close button on form */
+#contact > div {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: white;
+  cursor: pointer;
+  overflow: hidden;
 }
 form[name="contact-form"] {
   display: flex;
@@ -146,33 +161,22 @@ form[name="contact-form"] h2 {
   color: var(--dark-yellow);
 }
 .form-group {
-  width: 100%;
+  width: 80%;
   padding: 1rem;
 }
 textarea {
-  width: 80%;
+  width: 84%;
   min-height: 100px;
   border-radius: 4px;
+  margin-bottom: 2rem;
 }
 
-input[type="email"] {
+form[name="contact-form"] input[type="email"] {
   padding: 1rem;
   border-radius: 4px;
-  width: 40%;
+  width: 80%;
 }
 
-#contact > div {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  color: white;
-  cursor: pointer;
-  overflow: hidden;
-}
-/* This is for contact form */
-.invisible {
-  transform: translateX(110vw);
-}
 /* MAIN CONTAINER */
 /* needed to prevent scrolling */
 main {
@@ -292,11 +296,6 @@ main {
 @media (min-width: 576px) {
   nav {
     gap: 3rem;
-  }
-  textarea {
-    width: 100%;
-    min-height: 100px;
-    border-radius: 4px;
   }
 }
 

@@ -10,7 +10,7 @@ const codePlayNavLink = document.querySelector('.link-container');
 
 
 const formContainer = document.querySelector("#contact");
-const closeForm = document.querySelector("#contact > div");
+const closeContactButton = document.querySelector("#contact > div");
 
 
 const playSection = document.querySelector('#play');
@@ -33,16 +33,17 @@ window.addEventListener('load', () => {
   document.querySelector('body').classList.remove('preload');
 });
 
-closeForm.addEventListener('click', () => {
-  formContainer.classList.toggle("invisible");
-  active.isContactFormVisible = false;
+closeContactButton.addEventListener('click', () => {
+  // formContainer.classList.toggle("invisible");
+  // active.isContactFormVisible = false;
+  toggleContact();
 });
 
 contactButton.addEventListener('submit', (e) => {
-
   e.preventDefault();
-  formContainer.classList.toggle("invisible");
-  active.isContactFormVisible = true;
+  // formContainer.classList.toggle("invisible");
+  // active.isContactFormVisible = true;
+  toggleContact();
 
 });
 
@@ -65,6 +66,7 @@ playMask.addEventListener('click', () => {
 });
 // Listener for codePlayNavLink
 codePlayNavLink.addEventListener('click', (e) => {
+  if (active.isContactFormVisible === true) toggleContact();
   const els = Array.from(e.target.children);
   els.forEach(element => {
     element.classList.toggle('small-link');
@@ -151,6 +153,13 @@ function homeLinkClick() {
   codeMain.setAttribute('class', 'container zero-page');
   playMain.setAttribute('class', 'zero-page ');
   hideCodePlayNavLink();
+
+}
+
+function toggleContact() {
+  formContainer.classList.toggle("invisible");
+  if (active.isContactFormVisible === true) active.isContactFormVisible = false;
+  else active.isContactFormVisible = true;
 
 }
 
