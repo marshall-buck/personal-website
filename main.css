@@ -198,12 +198,12 @@ main {
 }
 /* TODO: fine tune image positioning */
 #code > .mask {
-  background-image: url(/assets/pexels-negative-space-97077.jpg);
+  background-image: url(assets/pexels-negative-space-97077.jpg);
   transition: var(--mask-transition);
 }
 
 #play > .mask {
-  background-image: url(/assets/image-12.jpg);
+  background-image: url(assets/image-12.jpg);
   transition: var(--mask-transition);
 }
 
