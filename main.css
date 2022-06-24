@@ -246,7 +246,7 @@ main {
 #code-main {
   transition: var(--button-transition);
   color: var(--dark-purple);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 /* TODO: scroll container for code main */
@@ -321,7 +321,7 @@ main {
     width: 70vw;
   }
   #code-main > p {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 
