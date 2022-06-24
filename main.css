@@ -8,7 +8,7 @@
   --box-shadow-purple: rgba(33, 14, 69, 0.4);
   --button-transition: all 0.4s ease-in-out;
   --page-transition: all 0.5s ease-out;
-  --mask-transition: all 0.7s ease-in;
+  --mask-transition: all 0.6s ease-in;
 }
 * {
   font-family: "Fredoka", sans-serif;
