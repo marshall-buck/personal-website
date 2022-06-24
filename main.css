@@ -9,6 +9,7 @@
   --button-transition: all 0.4s ease-in-out;
   --page-transition: all 0.5s ease-out;
   --mask-transition: all 0.6s ease-in;
+  --base-scale: scale(1.1);
 }
 * {
   font-family: "Fredoka", sans-serif;
@@ -49,7 +50,7 @@ button {
 }
 button:hover,
 .btn-contact:hover {
-  transform: scale(1.1);
+  transform: var(--base-scale);
 }
 
 /* Prevent the type cursor from showing up on home page */
@@ -93,7 +94,7 @@ nav a {
   transition: var(--button-transition);
 }
 nav > a:hover {
-  transform: scale(1.1);
+  transform: var(--base-scale);
 }
 
 .nav-link-hide {
@@ -113,6 +114,8 @@ nav > a:hover {
 .link-container div {
   pointer-events: none;
   font-size: 125%;
+  transition: opacity 1s ease-in;
+  transition: font-size 0.4s ease-out;
 }
 
 .link-container > div.small-link {
@@ -224,6 +227,9 @@ main {
   transition: var(--button-transition);
   cursor: pointer;
   z-index: 5;
+}
+.mask:hover {
+  transform: var(--base-scale);
 }
 .full-page {
   height: 100vh;
