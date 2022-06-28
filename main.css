@@ -227,6 +227,7 @@ main {
   transition: var(--button-transition);
   cursor: pointer;
   z-index: 5;
+  user-select: none;
 }
 .mask:hover {
   transform: var(--base-scale);
